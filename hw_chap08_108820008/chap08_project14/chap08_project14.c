@@ -3,7 +3,7 @@
 /* Author: 胡紹宇                                                */
 /* ID: 108820008                                                 */
 /* Date: 2019.10.29                                              */
-/* Purpose: Generate a random A-Z map                            */
+/* Purpose: Reverse the order of a sentence                      */
 /* Change History: log the change history of the program         */
 /*****************************************************************/
 
@@ -13,30 +13,36 @@
 
 int main()
 {
-	char ch,end='.',sentence[MAX_LEN];//
-	int n,i,j,start;
+	char ch,end='.',sentence[MAX_LEN]={' '}; // initialize the sentence with a ' '
+	int n,i,start,finish;
 
 	printf("Enter a sentence: ");
-	for(n=0;n<MAX_LEN;n++)
+	for(n=1;n<MAX_LEN;n++)
 	{
-		ch=getchar();
-		if(ch=='.'||ch=='?'||ch=='!')
+		ch=getchar(); // input each character to a char array
+		if(ch=='.' || ch=='?' || ch=='!')
 		{
-			end=ch;
+			// save the terminator to end and break out from the loop
+			end=ch; 
 			break;
 		}
 		sentence[n]=ch;
 	}
 
+	finish=n; // set finish as the end of a word
 	printf("Reversal of sentence: ");
-	for(i=n-1;i>=0;i--)
+	for(start=n-1;start>=0;start--)
 	{
-		if(sentence[i]==' ')
-			for(j=i+1;sentence[j]!=' ';j++)
-				putchar(sentence[i]);
-		putchar(' ');
+		// find the start of a word by finding a ' '
+		if(sentence[start]==' ')
+		{
+			// output the word
+			for(i=start;i<finish;i++)
+				putchar(sentence[i]); 
+			finish=start; // reset finish
+		}
 	}
-	putchar(end);
+	putchar(end); // output the terminator
 
 	return 0;
 }
