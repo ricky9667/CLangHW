@@ -13,7 +13,7 @@
 
 int main()
 {
-	char ch,end='.',sentence[MAX_LEN];
+	char ch,end='.',sentence[MAX_LEN];//
 	int n,i,j,start;
 
 	printf("Enter a sentence: ");
