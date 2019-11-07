@@ -22,7 +22,7 @@ void selection_sort(int a[MAX_LEN],int n)
 			p=i;
 	
 	tmp=a[p], a[p]=a[n-1], a[n-1]=tmp;
-	return selection_sort(a,n-1);
+	selection_sort(a,n-1);
 }
 
 int main()
