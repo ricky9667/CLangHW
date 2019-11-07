@@ -15,14 +15,13 @@ void selection_sort(int a[MAX_LEN],int n)
 {
 //	printf("n=%d\n",n);
 	if(n<=1) return;
-	int p,i,tmp;
-
+	int p=0,i,tmp;
 	for(i=1;i<n;i++)
 		if(a[i]>a[p]) 
 			p=i;
 	
 	tmp=a[p], a[p]=a[n-1], a[n-1]=tmp;
-	selection_sort(a,n-1);
+	return selection_sort(a,n-1);
 }
 
 int main()
