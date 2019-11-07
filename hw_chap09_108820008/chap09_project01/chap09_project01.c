@@ -11,7 +11,7 @@
 
 #define MAX_LEN 100
 
-void selection_sort(int* a,int n)
+void selection_sort(int a[MAX_LEN],int n)
 {
 //	printf("n=%d\n",n);
 	if(n<=1) return;
