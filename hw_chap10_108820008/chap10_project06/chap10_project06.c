@@ -53,9 +53,12 @@ int main()
 {
 	char ch;
 	printf("Enter an RPN expression: ");
-	while(true)
+	while(1)
 	{
 		scanf("%c",&ch);
+
+		if(ch==' ' || ch=='\n') continue;
+
 		if(ch>='0' && ch<='9')
 			push(ch-'0');
 		else if(ch=='+' || ch=='-' || ch=='*' || ch=='/')
