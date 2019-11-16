@@ -3,7 +3,7 @@
 /* Author: 胡紹宇                                                */
 /* ID: 108820008                                                 */
 /* Date: 2019.11.14                                              */
-/* Purpose:    */
+/* Purpose: Calculating numbers                     		     */
 /* Change History: log the change history of the program         */
 /*****************************************************************/
 
