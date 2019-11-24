@@ -2,8 +2,8 @@
 /* Class: Computer Programming, Fall 2019                        */
 /* Author: 胡紹宇                                                */
 /* ID: 108820008                                                 */
-/* Date: 2019.11.14                                              */
-/* Purpose: test if parentheses and braces are nested properly   */
+/* Date: 2019.11.24                                              */
+/* Purpose: airplane!!!!!                                        */
 /* Change History: log the change history of the program         */
 /*****************************************************************/
 
