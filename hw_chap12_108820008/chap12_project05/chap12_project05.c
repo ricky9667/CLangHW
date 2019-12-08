@@ -41,6 +41,5 @@ int main()
             finish = start;
         }
     printf("%c\n",terminator);
-
     return 0;
 }
