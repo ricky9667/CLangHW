@@ -14,10 +14,11 @@
 int compute_vowel_count(const char *sentence)
 {
     int vowels = 0;
+    // count vowels
     while(*sentence != '\0')
         switch(toupper(*sentence++))
             case 'A': case 'E': case 'I': case 'O': case 'U':
-                vowels++;
+                vowels++; // add 1 if current char is a vowel
     return vowels;
 }
 
@@ -26,9 +27,10 @@ int read_line(char str[], int n)
     int i = 0;
     char ch;
 
-    while((ch = getchar()) != '\n')
+    // input
+    while((ch = getchar()) != '\n') // terminate when tapping enter
         if(i < n)
-            str[i++] = ch;
+            str[i++] = ch; // put char into string
 }
 
 int main()
@@ -36,7 +38,11 @@ int main()
     char sentence[MAX_LEN+1];
 
     printf("Enter a sentence: ");
-    read_line(sentence, MAX_LEN);
+    
+    // input to sentence
+    read_line(sentence, MAX_LEN); 
+
+    // output by using compute_vowel_count
     printf("Your sentence contains %d vowels.\n", compute_vowel_count(sentence));
     
     return 0;

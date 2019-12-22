@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 {
     int i, sum = 0;
 
-    for(i=1;i<argc;i++)
-        sum += atoi(argv[i]);
+    for(i=1;i<argc;i++) 
+        sum += atoi(argv[i]); // convert numbers from string to int and add to sum
 
+    // output
     printf("Total: %d\n",sum);
     return 0;
 }

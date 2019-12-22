@@ -16,6 +16,7 @@ int read_line(char str[], int n)
     int i = 0;
     char ch;
 
+    // input
     while((ch = getchar()) != '\n')
         if(i < n)
             str[i++] = ch;
@@ -23,16 +24,19 @@ int read_line(char str[], int n)
 
 void reverse_name(char *name)
 {
-    char f = name[0];
+    char f = name[0]; // get first letter of name
     char *p = name;
 
+    // iterate to the end of first name
     while(*p != ' ') p++;
     p++;
 
+    // move last name to the front
     int index = 0;
     while((*p)!='\0') 
         name[index++] = *p, p++;
 
+    // replace the first letter of first name to the end
     name[index++] = ',';
     name[index++] = ' ';
     name[index++] = f;
@@ -45,9 +49,13 @@ int main()
     char name[LEN+1];
     
     printf("Enter a first and last name: ");
+    // input to name
     read_line(name, LEN);
 
+    // reverse the name order
     reverse_name(name);
+
+    // output
     printf("%s\n", name);
 
     return 0;
