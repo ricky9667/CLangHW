@@ -3,7 +3,7 @@
 /* Author: 胡紹宇                                                */
 /* ID: 108820008                                                 */
 /* Date: 2019.11.07                                              */
-/* Purpose:                        */
+/* Purpose:  SORT   					                         */
 /* Change History: log the change history of the program         */
 /*****************************************************************/
 
