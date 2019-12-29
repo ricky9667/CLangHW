@@ -1,0 +1,7 @@
+﻿Name: 胡紹宇
+
+ID: 108820008
+
+How many hours you spend on doing the homework? 8 hours
+
+(remember to delete *.exe)

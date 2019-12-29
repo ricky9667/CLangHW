@@ -12,13 +12,13 @@ int main()
 {
     int m, d, y;
     // list 12 months
-    char Months[15][15] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    const char months[15][15] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
     printf("Enter a date (mm/dd/yyyy): ");
     // input date
     scanf("%d / %d / %d", &m, &d, &y);
     // change month to string and output
-    printf("You entered the date %s %.2d, %d", Months[m-1], d, y);
+    printf("You entered the date %s %.2d, %d", *(months+m), d, y);
 
     return 0;
 }

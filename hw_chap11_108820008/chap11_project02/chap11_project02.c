@@ -23,12 +23,12 @@ void find_closest_flight(int time, int *departure, int *arrival)
     int d[] = {480,583,679,767,840,945,1140,1305,1920};
     int a[] = {616,712,811,900,968,1075,1280,1438,2056};
     // initialize min_index and closest_time
-    int min_index=0, closest_time=abs(time-d[0]);
+    int min_index=0, closest_time = abs(time-d[0]);
 
     // find the closest flight relative to the given time
     for(int i=1;i<9;i++)
         if(abs(time-d[i])<closest_time)
-            min_index=i, closest_time=abs(time-d[i]);
+            min_index=i, closest_time = abs(time-d[i]);
     
     // assign closest departure and arrival to the pointers
     *departure = d[min_index];
